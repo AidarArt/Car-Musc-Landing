@@ -1,0 +1,37 @@
+.footer {
+    background: $black;
+    padding: 30px 0;
+    border-top: 1px solid #898989;
+}
+
+.footer__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// .footer__nav {
+
+// }
+
+.privacy {
+    span {
+        text-transform: uppercase;
+        font-family: $font-D;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: .05em;
+        color: #808080;
+    }
+}
+
+.footer__menu {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .footer__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

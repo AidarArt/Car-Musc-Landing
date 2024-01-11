@@ -1,0 +1,70 @@
+// .nav {
+
+// }
+
+.nav-list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+// .nav-item {
+
+// }
+
+.nav-link {
+    color: $white;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.72px;
+    transition: color .3s ease;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+// .menu {
+
+// }
+
+.menu-btn {
+    width: 40px;
+    height: 25px;
+    position: relative;
+
+    &::before, &::after, .menu-btn-line {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $red;
+        transition: background .3s ease;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    .menu-btn-line {
+        cursor: pointer;
+        margin-top: 11px;
+        transform: translateX(-10px);
+        transition: transform .5s ease;
+    }
+
+    &:hover {
+        &::before, &::after, .menu-btn-line {
+            background: $white;
+        }
+
+        .menu-btn-line {
+            transform: translateX(0);
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.slider {
+    display: flex;
+    align-items: center;
+    background: $black;
+    margin-bottom: 180px;
+}
+.slider__content {
+    overflow: hidden;
+    display: flex;
+    max-width: 1296px;
+}
+
+.slider__content-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.slider-item {
+    width: 416px;
+    height: 420px;
+
+    .item-image {
+        width: 100%;
+        height: 350px;
+        transition: transform .3s ease;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .item-text {
+        max-width: 286px;
+        margin: 0 auto;
+        position: relative;
+        bottom: 9px;
+        z-index: 2;
+        p {
+            text-align: center;
+            color: $white;
+            font-family: $font-D;
+            font-size: 18px;
+            line-height: 140%;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            transition: color .3s ease;
+         }
+         &::before {
+            content: "";
+            position: absolute;
+            background: $red;
+            left: -40px;
+            width: 366px;
+            height: 70px;
+            z-index: -1;
+            bottom: 35px;
+            transition: background .3s ease, bottom .3s ease;
+         }
+
+    }
+
+    &:hover {
+        .item-image {
+            transform: scale(1.1);
+        }
+        .item-text{
+            p {
+               color: $red; 
+            }
+
+            &::before {
+                background: $white;
+                bottom: 3px;
+            }
+            
+        }
+    }
+}
+
+// .slider__btn {
+// }
+
+.slider__btn-left, .slider__btn-right {
+    width: 45px;
+    height: 45px;
+    rotate: 45deg;
+    border: 3px solid $red;
+    cursor: pointer;
+    transition: border-color .3s ease;
+
+    svg {
+        width: 30px;
+        height: 30px;
+        rotate: -45deg;
+        margin: 0 auto;
+        position: relative;
+        path {
+            transition: fill .3s ease;
+        }
+    }
+
+    &:hover {
+        border-color: $white;
+
+        svg path{
+            fill: $red;
+        }
+    }
+}
+
+.slider__btn-left {
+    // margin-right: 80px;
+    svg {
+        top: 7px;
+        left: 2px;
+    }    
+}
+
+.slider__btn-right {
+    // margin-left: 80px;
+    svg {
+        top: 2px;
+        left: 7px;
+    }
+}

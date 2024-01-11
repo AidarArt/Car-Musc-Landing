@@ -1,0 +1,116 @@
+.home {
+    background: linear-gradient(180deg, rgba(20, 20, 20, 0.80) 0%,
+     #141414 100%), url(../../images/home/home_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color:#FFF;
+    padding-top: 237px;
+    // position: relative;
+}
+
+// .home__row {
+    
+// }
+
+.home__content {
+    text-align: center;
+}
+
+// .home__content-title {
+    
+// }
+
+.home__content-decor {
+    justify-content: center;
+    margin-bottom: 41px;
+}
+
+.home__content-text {
+    max-width: 467px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 55px;
+    padding: 0 15px;
+    p {
+        font-size: 40px;
+        line-height: 120%;
+        color: $white;
+    }
+}
+
+.home__content-btn {
+    margin-bottom: 115px;
+}
+
+.home__table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.home__table-item {
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #808080;
+
+    font-family: $font-D;
+    font-size: 24px;
+    line-height: 140%;
+    letter-spacing: .05em;
+    color: $red;
+    text-transform: uppercase;
+
+    padding: 43px 0;
+
+    &:nth-child(1) {
+        p {
+            max-width: 265px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+
+    &:nth-child(2) {
+        border-left: 1px solid #808080;
+        border-right: 1px solid #808080;
+
+        a {
+            display: block;
+            text-align: center;
+            font-family: $font-D;
+            font-size: 24px;
+            line-height: 140%;
+            letter-spacing: .05em;
+            color: $red;
+            text-transform: uppercase;
+            transition: color .3s ease;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        a:nth-child(2) {
+            margin-bottom: 5px;
+        }
+    }
+
+    &:nth-child(3) {
+        span:not(:first-child) {
+            display: block;
+            text-align: center;
+        }
+
+        span:nth-child(2) {
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.home__table-item-title {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: $white;
+    margin-bottom: 20px;
+}

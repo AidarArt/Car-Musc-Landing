@@ -1,0 +1,121 @@
+@media (max-width: 1222px) {
+    .description__row { 
+        justify-content: center;
+        gap: 30px;
+    }
+}
+@media (max-width: 700px) {
+    // Header&nav
+    .nav {
+        display: none;
+    }
+    .header__row {
+        justify-content: flex-end;
+    }
+
+    // Home
+    .home {
+        padding-top: 90px;
+    }
+    h1 {
+        font-size: 90px;
+    }
+    .home__content-text {
+        p {
+            font-size: 30px;
+        }
+    }
+    .home__table {
+        grid-template-columns: auto;
+    }
+    .home__table-item {
+        &:nth-child(2), &:nth-child(3) {
+            position: relative;
+            top: -1px;
+        }
+        &:nth-child(3) {
+            top: -2px;
+        }
+    }
+
+    // Achievements
+    .achievements {
+        padding: 90px 0;
+    }
+    .achievements__row {
+        grid-template-columns: auto;
+    }
+    .achievements__content {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .achievements__content-decor {
+        display: flex;
+        justify-content: center;
+    }
+    .achievements__content-text {
+        margin: 0 auto;
+        p {
+            font-size: 22px;
+        }
+    }
+    .achievements-blocks-row:nth-child(2) {
+        top: 0;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    // Achievements slider
+    .slider {
+        margin-bottom: 90px;
+    }
+    .achievements__slider {
+        margin-top: 90px;
+    }
+    .achievements__slider {
+        .slider__btn {
+            display: none;
+        }
+        .slider__content {
+            overflow-x: auto;
+        }
+    }
+    // Achievements Description
+    .description__carousel-bottom {
+        flex-wrap: wrap;
+    }
+    .description__carousel-bottom-text {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    // Achievements
+    .achievements-blocks {
+        grid-template-columns: auto;   
+    }
+    .achievements-blocks-row:nth-child(2) {
+        top: -1px;
+        left: 0;
+    }
+    // Achievements__slider
+    .slider-item {
+        width: 250px;
+        .item-text {
+            p {
+                font-size: 16px;
+            }
+            
+            &::before {
+                width: 250px;
+                left: 0;
+            }
+        }
+    }
+}
+
+// Description
+// 1220px
+
+

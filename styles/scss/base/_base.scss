@@ -1,0 +1,110 @@
+body {
+    font-size: 24px;
+    font-family: $font-M;
+    background: $black;
+}
+
+h1 {
+    margin: 0 auto;
+    font-size: 150px;
+    font-family: $font-B;
+    text-transform: uppercase;
+    line-height: 120%;
+    color: $red;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-family: $font-D;
+    font-size: 52px;
+    line-height: 140%;
+    letter-spacing: 2.6px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+h3 {
+    font-family: $font-D;
+    font-size: 32px;
+    color: $white;
+    text-transform: uppercase;
+    line-height: 140%;
+    letter-spacing: .05em;
+}
+
+.container {
+    max-width: 1326px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.none {
+    display: none !important;
+}
+
+.decor {
+    display: flex;
+    gap: 30px;
+
+    .decor-item {
+        width: 10px;
+        height: 10px;
+        background: $red;
+        animation: 5s linear 0s normal none infinite running decorationRotate;
+        -webkit-animation: 5s linear 0s normal none infinite running decorationRotate;
+    }
+}
+
+.button {
+    color: $white;
+    font-size: 24px;
+    font-family: $font-D;
+    line-height: 140%;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+    transition: color .3s ease;
+
+    &:hover {
+        color: $red;
+        &::after {
+            width: 140%;
+            background: $white;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -15px;
+        bottom: -12px;
+        left: -25px;
+        width: 94.3%;
+        background: $red;
+        z-index: -1;
+        transition: width .3s ease;
+    }
+}
+
+@keyframes decorationRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

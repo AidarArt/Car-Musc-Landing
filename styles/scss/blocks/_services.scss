@@ -1,0 +1,147 @@
+.services {
+    background: $black;
+    padding-bottom: 180px;
+}
+
+// .services__content {
+
+// }
+
+.services__content-title {
+    text-align: center;
+}
+
+.services__content-decor {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.services__content-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 80px;
+    a {
+        font-family: $font-D;
+        font-size: 32px;
+        line-height: 140%;
+        letter-spacing: .05em;
+        color: $white;
+        text-transform: uppercase;
+        padding: 20px 40px 15px;
+        transition: color .3s ease, background .3s ease;
+
+        &:hover {
+            &:not(.active) {
+                background: $white;
+                color: $red;
+            }
+        }
+    }
+    .active {
+        background: $red;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .services__content-buttons {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+}
+
+.services__cards {
+    margin-bottom: 180px;
+}
+
+.services__cards-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+    .services__cards-row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.services__cards__item {
+    padding: 60px 40px;
+    border: 1px solid #808080;
+    text-align: center;
+    color: $white;
+    transition: transform 1s ease;
+    .hidden {
+        display: none;
+    }
+}
+
+.services__cards__item-image {
+    margin-bottom: 27px;
+    img {
+
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+}
+
+.services__cards__item-title {
+    margin-bottom: 20px;
+    h3 {
+        font-size: 24px;
+    }
+}
+
+.services__cards__item-text {
+    margin-bottom: 35px;
+    max-width: 226px;
+    p {
+        font-family: $font-D;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 140%;
+        letter-spacing: .05em;
+    }
+
+}
+
+.services__cards__item-button {
+    
+    a {
+        font-size: 18px;
+
+        &:hover {
+            color: $red;
+            &::after {
+                width: 170%;
+                background: $white;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 1221px) {
+    .description__content {
+        margin-top: 30px;
+    }  
+    .description__content-title, .description__content-decor {
+        justify-content: center;
+    }    
+    .description__content-text {
+        text-align: center;
+    }
+}
+
+.rotate_card{
+    transform:rotateY(180deg);
+
+    .services__cards__item-content {
+        transform:rotateY(-180deg);
+    }
+}
